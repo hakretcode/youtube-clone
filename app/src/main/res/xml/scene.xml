@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <Transition
+        app:constraintSetEnd="@id/expand"
+        android:id="@+id/transition"
+        app:constraintSetStart="@+id/collapse"
+        app:duration="150">
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorSide="bottom"
+            app:maxAcceleration="20"
+            app:onTouchUp="autoComplete"
+            app:touchAnchorId="@id/video_container"
+            app:touchRegionId="@id/video_container" />
+        <KeyFrameSet>
+            <KeyPosition
+                app:motionTarget="@id/video_player"
+                app:percentX="1"
+                app:percentWidth="1"
+                app:framePosition="10" />
+            <KeyAttribute
+                app:motionTarget="@id/tv_collapse_video_title"
+                android:alpha="0"
+                app:framePosition="10" />
+            <KeyAttribute
+                app:motionTarget="@id/tv_channel_name"
+                android:alpha="0"
+                app:framePosition="10" />
+            <KeyAttribute
+                app:motionTarget="@id/iv_play_pause"
+                android:alpha="0"
+                app:framePosition="10" />
+            <KeyAttribute
+                app:motionTarget="@id/iv_close"
+                android:alpha="0"
+                app:framePosition="10" />
+            <KeyAttribute
+                app:motionTarget="@id/ll_expand_container"
+                android:alpha="1"
+                app:framePosition="10" />
+        </KeyFrameSet>
+        <!--        <OnClick app:clickAction="toggle" app:targetId="@id/video_player" />-->
+    </Transition>
+
+    <ConstraintSet android:id="@+id/collapse">
+        <Constraint
+            android:layout_height="56dp"
+            app:visibilityMode="ignore"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@id/video_container" />
+        <Constraint
+            android:id="@id/video_player"
+            android:layout_width="135dp"
+            android:layout_height="0dp"
+            app:visibilityMode="ignore"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintTop_toTopOf="@id/video_container"
+            app:layout_constraintStart_toStartOf="@id/video_container" />
+        <Constraint android:id="@id/ll_expand_container">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+        <Constraint android:id="@id/view_overlay">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+        <Constraint android:id="@id/tv_collapse_video_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintEnd_toStartOf="@id/iv_play_pause"
+            app:layout_constraintStart_toEndOf="@id/video_player"
+            app:layout_constraintTop_toTopOf="@id/video_container"
+            app:visibilityMode="ignore" android:alpha="1" />
+        <Constraint android:id="@id/tv_channel_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintEnd_toStartOf="@id/iv_play_pause"
+            app:layout_constraintStart_toStartOf="@id/tv_collapse_video_title"
+            app:layout_constraintTop_toTopOf="@id/video_container"
+            app:visibilityMode="ignore" android:alpha="1" />
+        <Constraint android:id="@id/iv_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintEnd_toStartOf="@id/iv_close"
+            app:layout_constraintTop_toTopOf="@id/video_container" app:visibilityMode="ignore" android:alpha="1" />
+        <Constraint android:id="@id/iv_close" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintEnd_toEndOf="@id/video_container"
+            app:layout_constraintTop_toTopOf="@id/video_container" app:visibilityMode="ignore" android:alpha="1" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/expand">
+        <Constraint
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibilityMode="ignore"
+            android:id="@id/video_container" />
+        <Constraint
+            android:id="@id/video_player"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            app:visibilityMode="ignore"
+            app:layout_constraintStart_toStartOf="@id/video_container"
+            app:layout_constraintEnd_toEndOf="@id/video_container"
+            app:layout_constraintTop_toTopOf="@id/video_container"
+            app:layout_constraintBottom_toBottomOf="@id/video_container" />
+        <Constraint android:id="@id/ll_expand_container">
+            <PropertySet android:alpha="1" />
+        </Constraint>
+        <Constraint android:id="@id/view_overlay">
+            <PropertySet android:alpha="0.5" />
+        </Constraint>
+        <Constraint android:id="@id/tv_collapse_video_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintEnd_toStartOf="@id/iv_play_pause"
+            app:layout_constraintStart_toEndOf="@id/video_player"
+            app:layout_constraintTop_toTopOf="@id/video_container"
+            app:visibilityMode="ignore" android:alpha="0" />
+        <Constraint android:id="@id/tv_channel_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintEnd_toStartOf="@id/iv_play_pause"
+            app:layout_constraintStart_toStartOf="@id/tv_collapse_video_title"
+            app:layout_constraintTop_toTopOf="@id/video_container"
+            app:visibilityMode="ignore" android:alpha="0" />
+        <Constraint android:id="@id/iv_play_pause" app:visibilityMode="ignore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintEnd_toStartOf="@id/iv_close"
+            app:layout_constraintTop_toTopOf="@id/video_container"
+             android:alpha="0" />
+        <Constraint android:id="@id/iv_close"  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_container"
+            app:layout_constraintEnd_toEndOf="@id/video_container"
+            app:layout_constraintTop_toTopOf="@id/video_container" app:visibilityMode="ignore"
+            android:alpha="0"/>
+    </ConstraintSet>
+</MotionScene>

@@ -3,7 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.20104166666666667" />
+        <entry key="../../Android/Sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.215625" />
+        <entry key="app/src/main/res/drawable/ic_account_circle_black_24dp.xml" value="0.2212962962962963" />
+        <entry key="app/src/main/res/drawable/ic_close_black_24dp.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/drawable/ic_more_vert_black_24dp.xml" value="0.225" />
+        <entry key="app/src/main/res/drawable/ic_pause_black_24dp.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/drawable/ic_playlist_add_black_24dp.xml" value="0.23177083333333334" />
+        <entry key="app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.225" />
+        <entry key="app/src/main/res/drawable/ic_share_black_24dp.xml" value="0.23177083333333334" />
+        <entry key="app/src/main/res/drawable/test_arrow.xml" value="0.1203125" />
+        <entry key="app/src/main/res/drawable/test_close.xml" value="0.1203125" />
+        <entry key="app/src/main/res/drawable/test_dashboard.xml" value="0.1203125" />
+        <entry key="app/src/main/res/drawable/test_home.xml" value="0.1203125" />
+        <entry key="app/src/main/res/drawable/test_notifications.xml" value="0.1203125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_test.xml" value="0.20593692022263452" />
+        <entry key="app/src/main/res/layout/main_rv_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/video_collapsed_content.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/video_detail.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/video_expanded_content.xml" value="0.215625" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.215625" />
+        <entry key="app/src/main/res/menu/test_menu.xml" value="0.10416666666666667" />
+        <entry key="app/src/main/res/xml/test_scene.xml" value="0.10416666666666667" />
       </map>
     </option>
   </component>
