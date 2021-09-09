@@ -17,16 +17,16 @@
             app:touchRegionId="@id/video_container" />
         <KeyFrameSet>
             <KeyPosition
-                app:motionTarget="@id/video_player"
+                app:motionTarget="@id/video_surface"
                 app:percentX="1"
                 app:percentWidth="1"
                 app:framePosition="10" />
             <KeyAttribute
-                app:motionTarget="@id/tv_collapse_video_title"
+                app:motionTarget="@id/tv_video_title_collapsed"
                 android:alpha="0"
                 app:framePosition="10" />
             <KeyAttribute
-                app:motionTarget="@id/tv_channel_name"
+                app:motionTarget="@id/tv_channel_name_collapsed"
                 android:alpha="0"
                 app:framePosition="10" />
             <KeyAttribute
@@ -53,7 +53,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:id="@id/video_container" />
         <Constraint
-            android:id="@id/video_player"
+            android:id="@id/video_surface"
             android:layout_width="135dp"
             android:layout_height="0dp"
             app:visibilityMode="ignore"
@@ -66,23 +66,23 @@
         <Constraint android:id="@id/view_overlay">
             <PropertySet android:alpha="0" />
         </Constraint>
-        <Constraint android:id="@id/tv_collapse_video_title"
+        <Constraint android:id="@id/tv_video_title_collapsed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="17dp"
             app:layout_constraintBottom_toBottomOf="@id/video_container"
             app:layout_constraintEnd_toStartOf="@id/iv_play_pause"
-            app:layout_constraintStart_toEndOf="@id/video_player"
+            app:layout_constraintStart_toEndOf="@id/video_surface"
             app:layout_constraintTop_toTopOf="@id/video_container"
             app:visibilityMode="ignore" android:alpha="1" />
-        <Constraint android:id="@id/tv_channel_name"
+        <Constraint android:id="@id/tv_channel_name_collapsed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
             app:layout_constraintBottom_toBottomOf="@id/video_container"
             app:layout_constraintEnd_toStartOf="@id/iv_play_pause"
-            app:layout_constraintStart_toStartOf="@id/tv_collapse_video_title"
+            app:layout_constraintStart_toStartOf="@id/tv_video_title_collapsed"
             app:layout_constraintTop_toTopOf="@id/video_container"
             app:visibilityMode="ignore" android:alpha="1" />
         <Constraint android:id="@id/iv_play_pause"
@@ -109,7 +109,7 @@
             app:visibilityMode="ignore"
             android:id="@id/video_container" />
         <Constraint
-            android:id="@id/video_player"
+            android:id="@id/video_surface"
             android:layout_height="0dp"
             android:layout_width="0dp"
             app:visibilityMode="ignore"
@@ -123,23 +123,23 @@
         <Constraint android:id="@id/view_overlay">
             <PropertySet android:alpha="0.5" />
         </Constraint>
-        <Constraint android:id="@id/tv_collapse_video_title"
+        <Constraint android:id="@id/tv_video_title_collapsed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="17dp"
             app:layout_constraintBottom_toBottomOf="@id/video_container"
             app:layout_constraintEnd_toStartOf="@id/iv_play_pause"
-            app:layout_constraintStart_toEndOf="@id/video_player"
+            app:layout_constraintStart_toEndOf="@id/video_surface"
             app:layout_constraintTop_toTopOf="@id/video_container"
             app:visibilityMode="ignore" android:alpha="0" />
-        <Constraint android:id="@id/tv_channel_name"
+        <Constraint android:id="@id/tv_channel_name_collapsed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
             app:layout_constraintBottom_toBottomOf="@id/video_container"
             app:layout_constraintEnd_toStartOf="@id/iv_play_pause"
-            app:layout_constraintStart_toStartOf="@id/tv_collapse_video_title"
+            app:layout_constraintStart_toStartOf="@id/tv_video_title_collapsed"
             app:layout_constraintTop_toTopOf="@id/video_container"
             app:visibilityMode="ignore" android:alpha="0" />
         <Constraint android:id="@id/iv_play_pause" app:visibilityMode="ignore"

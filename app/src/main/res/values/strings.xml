@@ -3,4 +3,8 @@
     <string name="info">%s - %s views - %s</string>
     <string name="search">Search</string>
     <string name="account">Account</string>
+    <string name="save">Save</string>
+    <string name="download">Download</string>
+    <string name="share">Share</string>
+    <string name="subscribes">17K subscribers</string>
 </resources>
